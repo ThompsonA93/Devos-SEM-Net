@@ -1,0 +1,11 @@
+# Exemplary SPARQL-insert query over a set of information given prefixes.
+PREFIX schema: <http://schema.org/>
+PREFIX : <http://example.org/devos/>
+
+# The idea: Ahomepage identifies a person with the specified attributes.
+INSERT { <http://example.org/devos/0> a schema:Person;
+  schema:givenName "Ash" ;
+  schema:lastName "Ketchum" ;
+  schema:nationality "Japan" ;
+  :address "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5" .
+} WHERE {}

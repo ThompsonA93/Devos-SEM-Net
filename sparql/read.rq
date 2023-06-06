@@ -1,0 +1,6 @@
+# Example Query for reading information inserted.
+# The idea: Query a specific person (here '0') and fetch information about that person.
+SELECT ?o 
+WHERE { 
+	<http://example.org/devos/0> ?p ?o .
+}
