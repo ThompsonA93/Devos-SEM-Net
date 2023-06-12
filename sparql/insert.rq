@@ -2,10 +2,25 @@
 PREFIX schema: <http://schema.org/>
 PREFIX : <http://example.org/devos/>
 
-# The idea: Ahomepage identifies a person with the specified attributes.
-INSERT { <http://example.org/devos/0> a schema:Person;
+# The idea: A webpage identifies a person with the specified attributes.
+# For the prototype, we utilize the address as search key, as it is known during the run-time of the smart contract.
+INSERT { <http://example.org/devos/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266> a schema:Person;
   schema:givenName "Ash" ;
   schema:lastName "Ketchum" ;
   schema:nationality "Japan" ;
-  :address "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5" .
+  :address "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266" ;
+} WHERE {} ;
+
+INSERT { <http://example.org/devos/0x70997970C51812dc3A010C7d01b50e0d17dc79C8> a schema:Person;
+  schema:givenName "Tom" ;
+  schema:lastName "Autzn" ;
+  schema:nationality "Austria" ;
+  :address "0x70997970C51812dc3A010C7d01b50e0d17dc79C8" ;
+} WHERE {} ;
+
+INSERT { <http://example.org/devos/0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC> a schema:Person;
+  schema:givenName "Dorian" ;
+  schema:lastName "Autzn" ;
+  schema:nationality "Austria" ;
+  :address "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC" ;
 } WHERE {}
