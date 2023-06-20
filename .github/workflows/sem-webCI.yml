@@ -1,0 +1,24 @@
+name: Sem-Web CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  cpp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies - Java11
+        run: |
+          ./install_java11.sh
+      - name: Install dependencies - NGINX
+        run: |
+            ./install_nginx.sh
+      - name: Install dependencies - GraphDB
+        run: |
+            ./install_graphdb.sh
+      - name: Run GraphDB
+        run: |
+          cd ./graphdb/graphdb-10.2.1/bin/ 
+          ./graphdb -d

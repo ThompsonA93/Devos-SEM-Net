@@ -1,20 +1,15 @@
-# Devos-SEM-Net
-
-
 | Environment      | Version          |
 | ---------------- | ---------------- |
-| Operating System | Ubuntu 22.04 LTS |
+| Operating System | Ubuntu 22.04.2 LTS |
 | GraphDB          | 10.2.1-1         |
-
-
-
+| Java             | 11.0.19 		  |
+| Nginx 		   | 1.18.0			  |
 
 ## Installation
 Manually download [GraphDB](https://www.ontotext.com/products/graphdb/). It is freeware, but requires registration for some reason.
 Public packages are not available for automated fetch.
 
 ## Execution
-
 Run GraphDB via Icon.
 The DB is per default available via port 7200. Then route to the workbench.
 
