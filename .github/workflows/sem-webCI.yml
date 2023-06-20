@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  cpp:
+  Devos-SEM-Net:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

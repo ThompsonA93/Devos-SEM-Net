@@ -10,6 +10,6 @@ echo "server {
   }
 }" | sudo tee /etc/nginx/sites-available/devos.conf
 sudo unlink /etc/nginx/sites-enabled/default
-sudo unlink /etc/nginx/sites-enabled/devos.conf
+# sudo unlink /etc/nginx/sites-enabled/devos.conf
 sudo ln -s /etc/nginx/sites-available/devos.conf /etc/nginx/sites-enabled/devos.conf
 sudo systemctl reload nginx
