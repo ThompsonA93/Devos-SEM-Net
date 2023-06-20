@@ -1,7 +1,5 @@
 #!/bin/bash
 echo "# Devos-SEM-Net
-
-
 | Environment      | Version          |
 | ---------------- | ---------------- |
 | Operating System | $(lsb_release -d | awk '{print $2 " " $3}') |
