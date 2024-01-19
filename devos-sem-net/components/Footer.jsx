@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="border-t-4 grid grid-cols-3 gap-3">
             <div className="column">
                 <section className="m-4">
-                    <p>Build: 0.01.2023</p>                    
+                    <p>Build: 0.01.2024</p>                    
                 </section>
             </div>
             <div className="column">
@@ -24,7 +24,6 @@ const Footer = () => {
                     Powered by <br />
                     <Link className="ml-2" href="https://vercel.com">Vercel.com</Link><br />
                     <Link className="ml-2" href="https://nextjs.org/">Nextjs.org</Link><br />
-                    <Link className="ml-2" href="https://neo4j.com/">Neo4J.com</Link><br />
                 </section>
             </div>
         </div>
