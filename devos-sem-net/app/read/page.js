@@ -4,14 +4,10 @@ import { promises as fs } from 'fs';
 export default async function Page() {
   const file = await fs.readFile(process.cwd() + '/app/data/data.json', 'utf8');
 
-  const content = file
-    .replaceAll('@id', 'link')
+  const content = file.replaceAll('@id', 'link')
 
   const data = JSON.parse(content);
 
-  console.log(data)
-
-  // Utter f madness, thanks JSON
   return (
     <>
     {data.map(entry => (
