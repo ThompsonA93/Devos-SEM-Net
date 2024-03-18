@@ -1,7 +1,9 @@
+"""
+Convert from given data.csv to data.json
+"""
 import csv
 import json
 import os
-
 
 with open('data.csv', newline='') as csvfile:
     reader = csv.DictReader(csvfile)

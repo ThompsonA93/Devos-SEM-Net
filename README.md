@@ -1,20 +1,7 @@
 # Devos-SEM-Net
 
-Webpage simulating a crawler for semantic web data.\
-Data is located within the same page and requested via REST-API.
+Webpage simulating a crawler for semantic web data.
 
-| Environment      | Version          |
-| ---------------- | ---------------- |
-| Operating System | Ubuntu 22.04.2 LTS |
+Refer to the `README.md` of each respective directory for more information.
 
 
-## Installation
-
-
-## Execution
-
-Notable routes:
-
-
-
-## Troubleshooting / Errors

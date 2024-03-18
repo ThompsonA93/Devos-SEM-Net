@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Devos-SEM-Net
+Middleware connecting to simulated semantic web data crawler.
 
-## Getting Started
+| Environment      | Version          |
+| ---------------- | ---------------- |
+| Operating System | Linux 6.5.0-25-generic |
+| Server | Node v18.17.1 |
 
-First, run the development server:
+| Dependencies      | Version          |
+| ---------------- | ---------------- |
+| Dotenv | "^16.4.5", |
+| Express | "^4.18.3", |
+| Mongoose | "^8.2.2", |
+| Nodemon | "^3.1.0" |
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Installation
+
+Refer to `__install.sh`. `Package.json` includes all relevant sources.
+
+Setup the Port for the Server in `.env`.
+
+Current implementation requires a running MongoDB-Server, which is accessed via Driver.
+Setup the link to MongoDB within `.env`.
+
+Feeding the Database with test-data can be done via script or manually.
+
+The Datamodel currently has the following mongoose schema:
+
+```json
+
+const addressSchema = new Schema({
+    address: {
+        type: String,
+        required: true
+    },
+    nationality: {
+        type: String,
+        required: true
+    },
+    reference: {
+        type: String,
+        required: true
+    },
+}, { timestamps: true })
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Execution
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the server using `npm run start` or `npm run start-nodemon`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Explore the server via Browser or Postman requests.
 
-## Deploy on Vercel
+#### Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Current routes are setup over `/api/addresses/` and `/api/addresses/:id`, where `:id` is a variable address.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
