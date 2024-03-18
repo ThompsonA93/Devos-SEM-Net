@@ -7,12 +7,8 @@ const getAddresses = async (req, res) => {
 }
 
 const getAddress = async(req, res) => {
-    const {address} = req.params
-    if(!mongoose.Types.ObjectId.isValid(address)){
-        return res.status(404).json({error: 'Address not found'})
-    }
-
-    const data = await Address.findById(address)
+    const {id} = req.params
+    const data = await Address.find({address: id})
     if(!data){
         return res.status(404).json({error: 'Data not found'})
     }
