@@ -4,7 +4,6 @@ Drop whole collection. Useful only for resetting a database during development
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
-
 from pymongo import MongoClient
 
 
